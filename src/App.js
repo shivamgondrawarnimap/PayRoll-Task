@@ -8,8 +8,6 @@ import { getToken } from './utils/utils';
 
 function App() {
 
-  console.log("token",getToken())
-
   const routing = createBrowserRouter([
     ...Object.values(PATH.publicRoutes).map(route => ({
       path: route.path,
