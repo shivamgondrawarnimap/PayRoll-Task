@@ -19,7 +19,6 @@ function App() {
         ...Object.values(PATH.privateRoutes).map(child => ({
           path: child.path,
           element: child.element,
-          permissionName: child.permissionName,
           children: child?.children && Object.values(child.children).map(x => ({
             path: x.path,
             element: x.element,
@@ -27,11 +26,11 @@ function App() {
         })),
         {
           path: "/",
-          element: <Navigate to={PATH.privateRoutes.HOME.path} />
+          element: <Navigate to={PATH.privateRoutes.DASHBOARD.path} />
         },
         {
           path: "*",
-          element: <Navigate to={PATH.privateRoutes.HOME.path} />
+          element: <Navigate to={PATH.privateRoutes.DASHBOARD.path} />
         },
       ],
     },

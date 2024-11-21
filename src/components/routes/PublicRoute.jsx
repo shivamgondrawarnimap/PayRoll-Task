@@ -4,7 +4,7 @@ import { getToken } from '../../utils/utils';
 
 const PublicRoute = ({ component: Component }) => {
     return (
-        !getToken() ? <Component /> : <Navigate to="/home" /> 
+        !getToken() ? <Component /> : <Navigate to="/" /> 
     )
 }
  

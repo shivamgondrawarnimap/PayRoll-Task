@@ -1,6 +1,9 @@
+import Billing from "../components/pages/billing/Billing";
 import Dashboard from "../components/pages/dashboard/Dashboard";
 import Login from "../components/pages/login/Login";
+import MyTask from "../components/pages/mytask/MyTask";
 import MyTeam from "../components/pages/myteam/MyTeam";
+import Setting from "../components/pages/setting/Setting";
 
 
 
@@ -11,31 +14,32 @@ export const PATH = {
             path: '/login',
             element: Login
         },
-        // FORGOT_PASSWORD: {
-        //     path: "/forgot-password",
-        //     element: ForgotPassword
-        // },
     },
     privateRoutes: {
-        HOME: {
-            path: "/home",
+        DASHBOARD: {
+            path: "/dashboard",
             element: <Dashboard />,
             pageName: "Dashboard",
-            // sidebar: {
-            //     show: true,
-            //     icon: HomeIcon,
-            // },
-            permissionName: "ViewDashboard"
         },
         MY_TEAM: {
             path: "/myteam",
             element: <MyTeam />,
             pageName: "MyTeam",
-            // sidebar: {
-            //     show: true,
-            //     icon: TasksIcon,
-            // },
-            permissionName: "ViewTasks"
+        },
+        MY_TASK: {
+            path: "/mytask",
+            element: <MyTask />,
+            pageName: "MyTask",
+        },
+        BILLING: {
+            path: "/billing",
+            element: <Billing />,
+            pageName: "Billing",
+        },
+        SETTING: {
+            path: "/setting",
+            element: <Setting />,
+            pageName: "Setting",
         },
     },
 }
