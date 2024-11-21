@@ -4,7 +4,7 @@ import { getToken } from '../../utils/utils';
 
 const PrivateRoute = ({ component: Component }) => {
     return (
-        getToken() ? <Component /> : <Navigate to="/login"/>
+        !getToken() ? <Component /> : <Navigate to="/login"/>
     )
 }
  
