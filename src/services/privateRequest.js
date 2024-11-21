@@ -3,7 +3,7 @@ import { getToken } from "utils/utils";
 import toast from "components/shared/toast/toast";
 
 const privateRequest = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL
+    // baseURL: process.env.REACT_APP_API_BASE_URL
 })
 
 const requestHandler = (request) => {

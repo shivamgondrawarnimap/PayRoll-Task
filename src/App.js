@@ -1,10 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import './App.css';
 import { PATH } from './utils/constants';
 import PublicRoute from './components/routes/PublicRoute';
 import PrivateRoute from './components/routes/PrivateRoute';
-import Home from './components/pages/Home';
-import { getToken } from './utils/utils';
+import Home from './components/pages/home/Home';
 
 function App() {
 
@@ -26,7 +25,19 @@ function App() {
             element: x.element,
           })),
         })),
+        {
+          path: "/",
+          element: <Navigate to={PATH.privateRoutes.HOME.path} />
+        },
+        {
+          path: "*",
+          element: <Navigate to={PATH.privateRoutes.HOME.path} />
+        },
       ],
+    },
+    {
+      path: "*",
+      element: <Navigate to="/" />
     },
   ]);
 
